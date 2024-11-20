@@ -1,0 +1,46 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyc
+*.pyo
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+
+# Environment
+.env
+venv/
+env/
+charles_env/
+*.env
+
+# Static files
+/media
+
+# Migration files
+ migrations/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Local Django settings
+local_settings.py
+
+#migrations
+migrations
