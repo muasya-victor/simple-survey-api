@@ -107,14 +107,12 @@ import dj_database_url
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-print(os.getenv("DATABASE_URL"), 'url')
 
 DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv("DATABASE_URL")
     )
 }
-print(os.getenv("DATABASE_URL"), 'url 2')
 
 
 # Password validation

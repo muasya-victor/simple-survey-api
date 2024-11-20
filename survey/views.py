@@ -15,7 +15,6 @@ class ResponseViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         # Log incoming data
-        print("Incoming data:", request.data)
 
         # Wrap data in `responses` if necessary
         if isinstance(request.data, list):
@@ -26,7 +25,6 @@ class ResponseViewSet(viewsets.ModelViewSet):
         # Validate and process
         serializer = BulkResponseSerializer(data=request_data)
         if not serializer.is_valid():
-            print("Validation errors:", serializer.errors)  # Log validation errors
             return DRFResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         # Create responses

@@ -96,32 +96,6 @@ class BulkResponseSerializer(serializers.Serializer):
         return {'responses': responses}
 
 
-# class BulkResponseSerializer(serializers.Serializer):
-#     print(request)
-#     responses = ResponseSerializer(many=True)
-#
-#     def create(self, validated_data):
-#         responses_data = validated_data.get('responses', [])
-#         responses = []
-#
-#         for response_data in responses_data:
-#             question = response_data.get('question')
-#             response_text = response_data.get('response_text')
-#             selected_options = response_data.get('selected_options', [])  # Updated field
-#
-#             response = Response.objects.create(
-#                 question=question,
-#                 response_text=response_text if question.type in ['short_text', 'long_text', 'email'] else None
-#             )
-#
-#             if question.type == 'choice':
-#                 response.selected_options.set(selected_options)
-#
-#             responses.append(response)
-#
-#         return {'responses': responses}
-
-
 class ChoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Choice
