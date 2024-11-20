@@ -34,7 +34,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
     'http://127.0.0.1',
     'http://localhost:5173',
-    'https://surverypro.netlify.app'
+    'https://surverypro.netlify.app',
     'https://desirable-transformation-production.up.railway.app',
 ]
 
